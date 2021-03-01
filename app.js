@@ -33,6 +33,8 @@ mongoose.connect("mongodb://localhost:27017/userDB", {
   useUnifiedTopology: true,
 });
 
+mongoose.set("useCreateIndex", true)
+
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
